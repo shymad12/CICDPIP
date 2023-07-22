@@ -19,8 +19,13 @@ public class Hello extends HttpServlet {
       // Set response content type
       response.setContentType("text/html");
 
-      // Actual logic goes here.
-      PrintWriter out = response.getWriter();
-      out.println("<h1>" + message + "</h1>");
+      try {
+         // Actual logic goes here.
+         PrintWriter out = response.getWriter();
+         out.println("<h1>" + message + "</h1>");
+      } catch (IOException e) {
+         // Handle the IOException here (e.g., logging the error or sending an error response)
+         e.printStackTrace();
+      }
    }
 }
