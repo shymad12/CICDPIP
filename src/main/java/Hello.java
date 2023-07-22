@@ -8,7 +8,7 @@ public class Hello extends HttpServlet {
 
    public void init() throws ServletException {
       // Do required initialization
-      message = "Hello from Shyam ";
+      message = "Hello from Shyam";
    }
 
    public void doGet(HttpServletRequest request, HttpServletResponse response)
