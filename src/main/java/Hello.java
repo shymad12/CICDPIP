@@ -22,8 +22,8 @@ public class Hello extends HttpServlet {
          PrintWriter out = response.getWriter();
          out.println("<h1>" + message + "</h1>");
       } catch (IOException e) {
-         // Log the error using a logger
-         LOGGER.error("An IOException occurred", e);
+         // Log the error instead of printing the stack trace
+         e.printStackTrace(); // Replace this with a logger statement (e.g., LOGGER.error("An IOException occurred", e);)
       }
    }
 }
