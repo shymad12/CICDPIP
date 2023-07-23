@@ -29,8 +29,9 @@ public class Hello extends HttpServlet {
             // Log the error using the logger
             LOGGER.error("An IOException occurred", e);
         } catch (Exception e) {
-            // Handle any other exceptions appropriately
+            // Handle other specific exceptions separately or rethrow if necessary
             LOGGER.error("An unexpected error occurred", e);
+            throw new ServletException("Unexpected error occurred", e);
         }
     }
 }
