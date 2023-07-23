@@ -1,3 +1,4 @@
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.IOException;
@@ -29,9 +30,8 @@ public class Hello extends HttpServlet {
             // Log the error using the logger
             LOGGER.error("An IOException occurred", e);
         } catch (Exception e) {
-            // Handle other specific exceptions separately or rethrow if necessary
+            // Handle any other exceptions appropriately
             LOGGER.error("An unexpected error occurred", e);
-            throw new ServletException("Unexpected error occurred", e);
         }
     }
 }
